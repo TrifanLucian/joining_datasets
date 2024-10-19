@@ -1,12 +1,12 @@
 # joining_datasets
 
-<pre>Pentru rezolvarea problemei voi folosi limbajul de programare Python si biblioteca Pandas datorita functiilor de analiza, curatare si de manipulare a datelor. Biblioteca Pandas poate fi folosita pentru seturi mari de date.
-Incarc datele CSV prin metoda read_csv pentru a explora structura datelor si pentru a genera metadate.
-Ma folosesc de metodele  .info(), isna() sin unique() pentru afisarea informatiile generale despre dataseturi, numar de valori lipsa pe fiecare coloanal, si cate valori unica sunt in fiecare coloana.</pre>
+Pentru rezolvarea problemei voi folosi limbajul de programare Python si biblioteca Pandas datorita functiilor de analiza, curatare si de manipulare a datelor. Biblioteca Pandas poate fi folosita pentru seturi mari de date.
+Incarc datele CSV prin metoda read_csv pentru a explora structura datelor si pentru a genera metadate.<br>
+Ma folosesc de metodele  .info(), isna() sin unique() pentru afisarea informatiile generale despre dataseturi, numar de valori lipsa pe fiecare coloanal, si cate valori unica sunt in fiecare coloana.<br>
 
 ![image](https://github.com/user-attachments/assets/9ebe2836-88f3-4d8c-a937-910df765e3d5)
 
-<pre>Pentru setul de date Facebook:
+Pentru setul de date Facebook:
 -	Pe coloanele  ‘name’ si pe ‘domain’ avem cele mai multe valori unice
 -	Pe aeleasi coloane ‘name’ si ‘domain’ nu sunt valori NA.
 Pentru setul de date Google:
@@ -25,8 +25,8 @@ np.int64(71162)
 >>>df3['domain'].isin(df2['domain']).sum()
 np.int64(70105)
 ```
-<pre>Aproape toate datele din coloana “Domain” din setul de date facebook si website se regasesc in setul de date google. La fel si pentru facebook in raport cu website.
-Folosim metodele series.apply(type).unique() pentru a afla tipurile de date din fiecare coloane. Toate datele sunt Float si Str. Pentru coloana Phone, voi face conversii catre int iar apoi in str.</pre>
+Aproape toate datele din coloana “Domain” din setul de date facebook si website se regasesc in setul de date google. La fel si pentru facebook in raport cu website.<br>
+Folosim metodele series.apply(type).unique() pentru a afla tipurile de date din fiecare coloane. Toate datele sunt Float si Str. Pentru coloana Phone, voi face conversii catre int iar apoi in str.<br>
 ```
 Coloana 'domain' are următoarele tipuri de date: [<class 'str'>]
 Coloana 'address' are următoarele tipuri de date: [<class 'str'> <class 'float'>]
