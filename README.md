@@ -9,4 +9,5 @@ Ma folosesc de metodele  .info(), isna() sin unique() pentru afisarea informatii
 
 ```df1['domain'].isin(df2['domain']).sum()
 np.int64(69296)
+```
 
