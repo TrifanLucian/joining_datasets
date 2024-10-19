@@ -7,6 +7,6 @@ Ma folosesc de metodele  .info(), isna() sin unique() pentru afisarea informatii
 ![image](https://github.com/user-attachments/assets/9ebe2836-88f3-4d8c-a937-910df765e3d5)
 
 
-'''df1['domain'].isin(df2['domain']).sum()
-np.int64(69296)'''
+```df1['domain'].isin(df2['domain']).sum()
+np.int64(69296)```
 
