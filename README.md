@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f5725d59-9f16-4c2a-8a1e-8e321faaed3f)# joining_datasets
+# joining_datasets
 
 Pentru rezolvarea problemei voi folosi limbajul de programare Python si biblioteca Pandas datorita functiilor de analiza, curatare si de manipulare a datelor. Biblioteca Pandas poate fi folosita pentru seturi mari de date.
 Incarc datele CSV prin metoda read_csv pentru a explora structura datelor si pentru a genera metadate.
