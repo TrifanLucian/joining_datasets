@@ -6,15 +6,11 @@ Ma folosesc de metodele  .info(), isna() si unique() pentru afisarea informatiil
 
 ![image](https://github.com/user-attachments/assets/9ebe2836-88f3-4d8c-a937-910df765e3d5)
 
-Pentru setul de date Facebook:
--	Pe coloanele  ‘name’ si pe ‘domain’ avem cele mai multe valori unice
--	Pe aeleasi coloane ‘name’ si ‘domain’ nu sunt valori NA.
-Pentru setul de date Google:
--	Cele mai multe valori unice avem pe coloanele ‘name’, ‘phone’, ‘text’
--	Cele mai putini valori NA sunt pe coloanele ‘name’ si ‘domain’
-Pentru Website: 
--	Cele mai multe valori unice sunt pe coloanele ‘domain’ si ‘phone’
--	Cele mai putine valori NA sunt pe coloanal ‘domain’
+### Observații cheie:
+- Setul **Facebook**: `name` și `domain` au cele mai multe valori unice și fără `NaN`.
+- Setul **Google**: Cele mai multe valori unice se află pe coloanele `name`, `phone`, și `text`.
+- Setul **Website**: `domain` și `phone` conțin cele mai multe valori unice, iar `domain` nu are valori `NaN`.
+
 Din aceste informatii , pot lua in considerare coloana ‘domain’ pentru imbinarea seturilor de date. Totodata observ ca in setul de date Google, sunt multe adrese care se repeta in coloana ‘domain’. Sunt 70109 adrese unice din 346925 inregistrari , raportat la doar doua campuri necompletate ( valoare NA).
 Comparam datele din coloanele commune alte dataseturilor: </pre>
 ```
@@ -33,7 +29,9 @@ Coloana 'address' are următoarele tipuri de date: [<class 'str'> <class 'float'
 Coloana 'phone' are următoarele tipuri de date: [<class 'float'>]
 ………………………………………………………………………………………………………
 ```
-Luand in considerare aceste informatii, voi folosi combinatia Domain + Name , care devine un identificator bun pentru companie.
+### Combinația datelor:
+Am ales să folosesc coloana `domain` pentru îmbinarea dataseturilor, datorită numărului mare de valori comune între seturi. Datele au fost combinate folosind un **join extern** pe coloanele `domain` și `name`, astfel încât să păstrez toate informațiile.
+
 Am decis sa curat datele dupa imbinarea seturilor pentru a nu pierde date care pot fi relevante sau folosite in setul final.
 Voi incepe prima oara prin imbinarea seturilor Facebook si Google pentru care voi folosi combinatia Domain + Name care devine un identificator potrivit pentru companie. Am folosit un join extern pentru a pastra toate datele posibile. 
 Valorile din coloanele duplicate cu sufixele _x si _y din dataframe-ul generat, se vor combina intr-o noua coloana astfel incat sa se pastreze valorile non-lipsa sau acolo unde exista diferente ( ex: doua numere de telefon diferite ) sa se concateneze sirurile de caractere astfel incat sa se pastreze ambele date. Ulterior operatiei de concatenare se vor sterge coloanele _x si _y. Acolo unde diferentele in tipurile de date pun probleme in prelucrare, se va face conversia valorilor, ( de exemplu valorile de tip “float” se vor transforma in “int” apoi in “str”, fara modificarea valorilor NaN.
