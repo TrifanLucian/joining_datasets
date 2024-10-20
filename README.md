@@ -11,7 +11,8 @@ Ma folosesc de metodele  .info(), isna() si unique() pentru afisarea informatiil
 - Setul **Google**: Cele mai multe valori unice se află pe coloanele `name`, `phone`, și `text`.
 - Setul **Website**: `domain` și `phone` conțin cele mai multe valori unice, iar `domain` nu are valori `NaN`.
 
-Din aceste informatii , pot lua in considerare coloana ‘domain’ pentru imbinarea seturilor de date. Totodata observ ca in setul de date Google, sunt multe adrese care se repeta in coloana ‘domain’. Sunt 70109 adrese unice din 346925 inregistrari , raportat la doar doua campuri necompletate ( valoare NA).<br>
+Din aceste informatii , pot lua in considerare coloana ‘domain’ pentru imbinarea seturilor de date. Totodata observ ca in setul de date Google, sunt multe adrese care se repeta in coloana ‘domain’. Sunt 70109 adrese unice din 346925 inregistrari , raportat la doar doua campuri necompletate ( valoare NA).<br><br>
+
 Comparam datele din coloanele comune ale dataseturilor: 
 ```
 >>>df1['domain'].isin(df2['domain']).sum()
@@ -22,6 +23,8 @@ np.int64(71162)
 np.int64(70105)
 ```
 Aproape toate datele din coloana “Domain” din setul de date facebook si website se regasesc in setul de date google. La fel si pentru facebook in raport cu website.<br>
+
+### Tipuri de date
 Folosim metodele series.apply(type).unique() pentru a afla tipurile de date din fiecare coloane. Toate datele sunt Float si Str. Pentru coloana Phone, voi face conversii catre int iar apoi in str.<br>
 ```
 Coloana 'domain' are următoarele tipuri de date: [<class 'str'>]
