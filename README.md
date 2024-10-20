@@ -11,8 +11,8 @@ Ma folosesc de metodele  .info(), isna() si unique() pentru afisarea informatiil
 - Setul **Google**: Cele mai multe valori unice se află pe coloanele `name`, `phone`, și `text`.
 - Setul **Website**: `domain` și `phone` conțin cele mai multe valori unice, iar `domain` nu are valori `NaN`.
 
-Din aceste informatii , pot lua in considerare coloana ‘domain’ pentru imbinarea seturilor de date. Totodata observ ca in setul de date Google, sunt multe adrese care se repeta in coloana ‘domain’. Sunt 70109 adrese unice din 346925 inregistrari , raportat la doar doua campuri necompletate ( valoare NA).
-Comparam datele din coloanele commune alte dataseturilor: </pre>
+Din aceste informatii , pot lua in considerare coloana ‘domain’ pentru imbinarea seturilor de date. Totodata observ ca in setul de date Google, sunt multe adrese care se repeta in coloana ‘domain’. Sunt 70109 adrese unice din 346925 inregistrari , raportat la doar doua campuri necompletate ( valoare NA).<br>
+Comparam datele din coloanele comune ale dataseturilor: 
 ```
 >>>df1['domain'].isin(df2['domain']).sum()
 np.int64(69296)
